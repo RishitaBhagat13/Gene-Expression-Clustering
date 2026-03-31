@@ -2,13 +2,12 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-print("preprocessing module loaded")   # debug
+print("preprocessing module loaded")   
 
 
 def load_data(path):
     df = pd.read_csv(path)
 
-    # 🔥 Extract labels (row 1, columns 2 onward)
     label_row = df.iloc[1, 2:].values
 
     y = []
@@ -23,16 +22,12 @@ def load_data(path):
 
     y = np.array(y)
 
-    # 🔥 Extract gene expression data
     data = df.iloc[2:, 2:]
 
-    # Convert to numeric
     data = data.apply(pd.to_numeric, errors='coerce')
 
-    # 🔥 Transpose → samples as rows
     X = data.T.values
 
-    # 🔥 IMPORTANT DEBUG
     print("X shape:", X.shape)
     print("y shape:", y.shape)
     print("Label distribution:", np.unique(y, return_counts=True))
