@@ -3,7 +3,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
 
-print(" ensemble loaded")
+print(" ensemble loaded ")
 
 
 def compute_weights(X, clusterings):
