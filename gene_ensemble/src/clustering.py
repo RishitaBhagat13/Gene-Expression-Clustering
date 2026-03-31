@@ -5,7 +5,7 @@ print("UPDATED clustering.py loaded ")
 
 
 # ============================================
-# 1. K-MEANS (FROM SCRATCH)
+# 1. K-MEANS 
 # ============================================
 def run_kmeans(X, k=2, max_iter=100):
     np.random.seed(42)
@@ -29,7 +29,7 @@ def run_kmeans(X, k=2, max_iter=100):
 
 
 # ============================================
-# 2. DBSCAN (FROM SCRATCH)
+# 2. DBSCAN 
 # ============================================
 def run_dbscan(X, eps=0.5, min_samples=3):
     n = len(X)
@@ -73,7 +73,7 @@ def run_dbscan(X, eps=0.5, min_samples=3):
 
 
 # ============================================
-# 3. AGGLOMERATIVE (FROM SCRATCH)
+# 3. AGGLOMERATIVE 
 # ============================================
 def run_agglomerative(X, k=2):
     clusters = [[i] for i in range(len(X))]
