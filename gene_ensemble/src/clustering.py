@@ -1,9 +1,6 @@
 import numpy as np
 from sklearn.metrics import silhouette_score
 
-print("UPDATED clustering.py loaded ")
-
-
 # ============================================
 # 1. K-MEANS 
 # ============================================
